@@ -4,6 +4,19 @@ This repository contains **real-world Bash scripts** used to automate common Lin
 
 The goal of this project is to demonstrate **practical Bash scripting skills** that are directly applicable to DevOps and SysAdmin roles.
 
+## 🔹 Advanced Automation Projects
+
+### Cross-VPS Backup System (Debian ⇄ AlmaLinux)
+A production-grade, bidirectional backup system using Bash, rsync, SSH keys, cron, and date-based retention.
+
+✔ Cross-server disaster recovery  
+✔ Secure SSH automation  
+✔ Deterministic retention logic  
+✔ Real-world failure handling  
+
+📂 Location: `Backups & Maintenance: cross-vps-backup-system/`
+
+
 ---
 
 ## 🔧 Skills Demonstrated
@@ -30,6 +43,8 @@ The goal of this project is to demonstrate **practical Bash scripting skills** t
 ### 💾 Backups & Maintenance
 - Log rotation
 - Home directory backups
+- cross-vps-backup-system
+- restore-from-backup.sh
 
 ### 🛠 Utilities
 - Temporary file cleanup
