@@ -1,0 +1,29 @@
++-------------------+                         +-------------------+
+|   Debian VPS      |                         |   AlmaLinux VPS   |
+|-------------------|                         |-------------------|
+| MySQL Databases   |                         | MSSQL Databases   |
+| /etc              |                         | /etc              |
+| /home             |                         | /var/www          |
+|                   |                         |                   |
+| Cron (Daily)      |                         | Cron (Daily)      |
+| Backup Script     |                         | Backup Script     |
++---------+---------+                         +---------+---------+
+          |                                             |
+          |  rsync over SSH (key-based auth)            |
+          +------------------------▶--------------------+
+          |                                             |
+          |   /backups/debian/YYYY-MM-DD                |
+          |                                             |
+          |◀------------------------+-------------------+
+          |   /alma_backups/YYYY-MM-DD                  |
+          |                                             |
++---------+---------+                         +---------+---------+
+| Retention Logic   |                         | Retention Logic   |
+| Keep 7 Days Only  |                         | Keep 7 Days Only  |
++-------------------+                         +-------------------+
+
+                Restore (On Demand)
+                -------------------
+                rsync from selected
+                backup date into
+                safe restore path
