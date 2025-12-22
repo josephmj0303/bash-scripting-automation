@@ -1,0 +1,1 @@
+15 6 * * * /bin/bash /opt/backups/debian-to-alma/backup.sh
